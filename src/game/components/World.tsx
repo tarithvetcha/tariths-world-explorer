@@ -5,6 +5,7 @@
  */
 import { useMemo } from "react";
 import * as THREE from "three";
+import type {} from "@react-three/fiber"; // brings JSX intrinsics for <mesh/>, <group/>, etc.
 import { POIS } from "../data/locations";
 
 const WORLD_RADIUS = 60;
