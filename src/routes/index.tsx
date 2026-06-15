@@ -1,29 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Game } from "@/game/components/Game";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Tarithcraft — A voxel portfolio adventure by Tarith Vetcha" },
+      { name: "description", content: "Explore a handcrafted voxel world that doubles as Tarith Vetcha's portfolio — game projects, Unreal Engine training, Blender renders, AI roadmap, and more." },
+      { property: "og:title", content: "Tarithcraft — A voxel portfolio adventure" },
+      { property: "og:description", content: "An indie voxel adventure that happens to be a portfolio. Built with React, Three.js, and a lot of love." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+  return <Game />;
 }
